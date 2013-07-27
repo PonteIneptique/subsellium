@@ -25,7 +25,7 @@
 		<![endif]-->
 		
   		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
-
+		<base href="<?=bloginfo('url');?>" />
 		<!-- wordpress head functions -->
 		<?php wp_head(); ?>
 		<!-- end of wordpress head -->
@@ -43,7 +43,7 @@
 		<header role="banner">
 			<div class="container">
 				<div class="clearfix row">
-						<img src="./wp-ressources/header.png" align="center" alt="<?=bloginfo('title');?>" />
+					<a href="<?=home_url(); ?>"><img src="./wp-ressources/header.png" align="center" alt="<?=bloginfo('title');?>" /></a>
 				</div> <!-- end #inner-header -->
 		
 				<?php if ( is_active_sidebar( 'header1' ) ) : ?>
