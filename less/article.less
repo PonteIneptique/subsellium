@@ -1,5 +1,4 @@
 article.post {
-	min-height:300px;
 	position:relative;
 	header {
 		position:relative;
@@ -26,7 +25,7 @@ article.post {
 			text-rendering: optimizelegibility;
 			width:40px;
 			height:40px;
-			left:-40px;
+			left:0;
 			text-align:center;
 			line-height:25px;
 			overflow:hidden;
@@ -51,6 +50,28 @@ article.post {
 		.author {
 			top:120px;
 			.avatar, a { border:0; display:block; width:100%; height:100%;}
+		}
+		
+		@media (min-width: 979px) and (max-width: 1199px) {
+			time, .coms, .author {
+				height:32px;
+				width:32px;
+				font-size:18px;
+				line-height:20px;
+			}
+			legend {
+				line-height:10px;
+				font-size:8px;
+			}
+			time {		top:40px;}
+			.coms {		top:72px;	}
+			.author {	top:104px;	}
+		}
+		@media (max-width: 979px) {
+			time, .coms, .author {
+				position:static;
+				display:inline-block;
+			}
 		}
 	}
 	section.post_content {
