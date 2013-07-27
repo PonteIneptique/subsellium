@@ -148,6 +148,15 @@ function bones_register_sidebars() {
       'before_title' => '<h4 class="widgettitle">',
       'after_title' => '</h4>',
     ));
+
+    register_sidebar(array(
+      'id' => 'header1',
+      'name' => 'Header',
+      'before_widget' => '<nav id="main-menu" class="row">',
+      'after_widget' => '</nav>',
+      'before_title' => '<h4 class="hidden">',
+      'after_title' => '</h4>',
+    ));
     
     
     /* 

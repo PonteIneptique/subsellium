@@ -41,43 +41,15 @@
 	<body <?php body_class(); ?>>
 				
 		<header role="banner">
+			<div class="container">
+				<div class="clearfix row">
+						<img src="./wp-ressources/header.png" align="center" alt="<?=bloginfo('title');?>" />
+				</div> <!-- end #inner-header -->
 		
-			<div id="inner-header" class="clearfix">
-				
-				<div class="navbar navbar-fixed-top">
-					<div class="navbar-inner">
-						<div class="container-fluid nav-container">
-							<nav role="navigation">
-								<a class="brand" id="logo" title="<?php echo get_bloginfo('description'); ?>" href="<?php echo home_url(); ?>">
-									<?php if(of_get_option('branding_logo','')!='') { ?>
-										<img src="<?php echo of_get_option('branding_logo'); ?>" alt="<?php echo get_bloginfo('description'); ?>">
-										<?php }
-										if(of_get_option('site_name','1')) bloginfo('name'); ?></a>
-								
-								<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-							        <span class="icon-bar"></span>
-							        <span class="icon-bar"></span>
-							        <span class="icon-bar"></span>
-								</a>
-								
-								<div class="nav-collapse">
-									<?php bones_main_nav(); // Adjust using Menus in Wordpress Admin ?>
-								</div>
-								
-							</nav>
-							
-							<?php if(of_get_option('search_bar', '1')) {?>
-							<form class="navbar-search pull-right" role="search" method="get" id="searchform" action="<?php echo home_url( '/' ); ?>">
-								<input name="s" id="s" type="text" class="search-query" autocomplete="off" placeholder="<?php _e('Search','bonestheme'); ?>" data-provide="typeahead" data-items="4" data-source='<?php echo $typeahead_data; ?>'>
-							</form>
-							<?php } ?>
-							
-						</div> <!-- end .nav-container -->
-					</div> <!-- end .navbar-inner -->
-				</div> <!-- end .navbar -->
-			
-			</div> <!-- end #inner-header -->
-		
+				<?php if ( is_active_sidebar( 'header1' ) ) : ?>
+					<?php dynamic_sidebar( 'header1' ); ?>
+				<?php endif ; ?>
+			</div>
 		</header> <!-- end header -->
 		
-		<div class="container-fluid">
+		<div class="container">
