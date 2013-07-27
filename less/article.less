@@ -72,7 +72,9 @@ article.post {
 				position:static;
 				display:inline-block;
 			}
+			.author:after {display:block; clear:left; }
 		}
+		img { margin:0; }
 	}
 	section.post_content {
 		margin:10px;
@@ -93,6 +95,18 @@ article.post {
 		.tags {
 		}
 		.meta {
+			a[rel="category tag"] { 
+				display:inline-block;
+				color:white;
+				background-color:#c0392b;
+				height:30px;
+				line-height:30px;
+				.border-radius(5px);
+				padding-left:5px;
+				padding-right:5px;
+				font-variant:none;
+				
+			}
 		}
 	}
 	
