@@ -5,7 +5,6 @@
 				<div id="main" class="span8 clearfix" role="main">
 				
 					<div class="page-header"><h1 class="archive_title h2">
-						<span><?php _e("Posts By:", "bonestheme"); ?></span> 
 						<?php 
 							// If google profile field is filled out on author profile, link the author's page to their google+ profile page
 							$curauth = (get_query_var('author_name')) ? get_user_by('slug', get_query_var('author_name')) : get_userdata(get_query_var('author'));
@@ -19,6 +18,8 @@
 							}
 						?>
 					</h1></div>
+					
+					<?php if ( function_exists( 'get_author_bio_box' ) ) echo get_author_bio_box();?>
 					
 					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 					
