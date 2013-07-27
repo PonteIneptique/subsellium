@@ -106,7 +106,7 @@ function bones_register_sidebars() {
     	'id' => 'sidebar1',
     	'name' => 'Main Sidebar',
     	'description' => 'Used on every page BUT the homepage page template.',
-    	'before_widget' => '<div id="%1$s" class="widget %2$s">',
+    	'before_widget' => '<div id="%1$s" class="widget ui-block %2$s">',
     	'after_widget' => '</div>',
     	'before_title' => '<h4 class="widgettitle">',
     	'after_title' => '</h4>',
@@ -152,7 +152,7 @@ function bones_register_sidebars() {
     register_sidebar(array(
       'id' => 'header1',
       'name' => 'Header',
-      'before_widget' => '<nav id="main-menu" class="row">',
+      'before_widget' => '<nav id="menu" class="row">',
       'after_widget' => '</nav>',
       'before_title' => '<h4 class="hidden">',
       'after_title' => '</h4>',
