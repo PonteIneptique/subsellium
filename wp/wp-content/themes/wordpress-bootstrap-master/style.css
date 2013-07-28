@@ -434,19 +434,19 @@ ol.commentlist span.edit-comment{
 }
 
 ol.commentlist li.bypostauthor{
-	background-color: #dddddd;
+	/*background-color: #dddddd;*/
 }
 
 ol.commentlist ul.children li{
-	background-color: #cccccc;
+	/*background-color: #cccccc;*/
 }
 
 ol.commentlist ul.children li ul.children li{
-	background-color: #bbbbbb;
+	/*background-color: #bbbbbb;*/
 }
 
 ol.commentlist ul.children li ul.children li ul.children li{
-	background-color: #aaaaaa;
+	/*background-color: #aaaaaa;*/
 }
 
 ol.commentlist article{
@@ -474,7 +474,8 @@ a.comment-reply-link{
 }
 
 .comment .vcard .comment-text{
-	margin-left: 0;
+	margin-left: 0;    font-size: 12px;
+    line-height: 14px;
 }
 
 img.avatar{
@@ -487,9 +488,10 @@ img.avatar{
 
 ol.commentlist li{
 	padding-right: 10px;
-	background-color: #F0F0F0;
+	/*background-color: #F0F0F0;*/
 }
-
+.comment-author .avatar h4 { height:18px; margin:0; padding:0; display:block; line-height:18px; font-family:"League Gothic"; font-size:18px; }
+.comment-author .avatar img { display:block; }
 #pings{
 	margin-bottom: 9px;
 }
