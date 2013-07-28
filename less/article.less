@@ -1,4 +1,4 @@
-article.post {
+article.post, article.page {
 	position:relative;
 	header {
 		position:relative;
@@ -78,8 +78,8 @@ article.post {
 	}
 	section.post_content {
 		margin:10px;
-		img:nth-child(1) {
-			margin:-10px;
+		img {
+			margin:10px;
 			display:block;
 		}
 		p.lead, p {
@@ -87,7 +87,17 @@ article.post {
 			line-height:14px;
 			font-weight:0;
 			text-align:justify;
+			text-indent:1em;
 		}
+		h1, h2, h3, h4, h5, h6 {
+			font-family: 'League Gothic';
+			font-size:30px;
+			line-height:40px;
+			font-weight:normal;
+		}
+		h2 { font-size:25px; line-height:32px; }
+		h3 { font-size:20px; line-height:26px; }
+		h4 { font-size:18px; line-height:20px; }
 	}
 	
 	footer {
