@@ -184,10 +184,11 @@ function bones_comments($comment, $args, $depth) {
 		<article id="comment-<?php comment_ID(); ?>" class="clearfix">
 			<div class="comment-author vcard row-fluid clearfix">
 				<div class="avatar span3">
+					<?php printf('<h4>%s</h4>', get_comment_author_link()) ?>
+                    <time datetime="<?php echo comment_time('Y-m-j'); ?>"><a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>"><?php comment_time('j F Y'); ?> </a></time>
 					<?php echo get_avatar( $comment, $size='75' ); ?>
 				</div>
 				<div class="span9 comment-text">
-					<?php printf('<h4>%s</h4>', get_comment_author_link()) ?>
 					<?php edit_comment_link(__('Edit','bonestheme'),'<span class="edit-comment btn btn-small btn-info"><i class="icon-white icon-pencil"></i>','</span>') ?>
                     
                     <?php if ($comment->comment_approved == '0') : ?>
@@ -197,8 +198,6 @@ function bones_comments($comment, $args, $depth) {
 					<?php endif; ?>
                     
                     <?php comment_text() ?>
-                    
-                    <time datetime="<?php echo comment_time('Y-m-j'); ?>"><a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>"><?php comment_time('F jS, Y'); ?> </a></time>
                     
 					<?php comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
                 </div>
